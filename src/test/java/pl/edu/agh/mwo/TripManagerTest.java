@@ -69,21 +69,18 @@ public class TripManagerTest {
 	@Test
 	public void testFindTripUsingKeywornInName() throws TripAlreadyExistsException {
 		tripManager.add(trip1);
-		tripManager.findTrip("Tenaryfa");
-		assertEquals(1, tripManager.getTrips().size());
+		assertEquals(1, tripManager.findTrip("Teneryfa").size());
 	}
 
 	@Test
 	public void testFindTripUsingKeywornInDesctiption() throws TripAlreadyExistsException {
 		tripManager.add(trip1);
-		tripManager.findTrip("Spain");
-		assertEquals(1, tripManager.getTrips().size());
+		assertEquals(1, tripManager.findTrip("Spain").size());
 	}
 
 	@Test
 	public void testFindTripUsingKeywornInPhotoDescrioption() throws TripAlreadyExistsException {
 		tripManager.add(trip1);
-		tripManager.findTrip("view");
-		assertEquals(1, tripManager.getTrips().size());
+		assertEquals(1, tripManager.findTrip("view").size());
 	}
 }
